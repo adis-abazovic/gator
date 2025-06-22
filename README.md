@@ -1,0 +1,1 @@
+In order to run this gator program, you will need to install PostgreSQL and Go.
