@@ -84,7 +84,7 @@ func main() {
 	commands.register("follow", middlewareLoggedIn(handlerFollow))
 	commands.register("following", middlewareLoggedIn(handlerFollowing))
 	commands.register("unfollow", middlewareLoggedIn(handlerUnfollow))
-	commands.register("browser", middlewareLoggedIn(handlerBrowse))
+	commands.register("browse", middlewareLoggedIn(handlerBrowse))
 
 	args := os.Args
 	if len(args) < 2 {
@@ -215,7 +215,7 @@ func main() {
 			fmt.Println(err)
 			os.Exit(-1)
 		}
-	} else if cmdName == "browser" {
+	} else if cmdName == "browse" {
 		browseCmd := command{
 			name: cmdName,
 			args: cmdArgs,
